@@ -1,4 +1,26 @@
-let mySprite = sprites.create(img`
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    projectile = sprites.createProjectileFromSprite(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . 8 8 8 . . . . . . . . 
+        . . . . 8 8 8 8 8 . . . . . . . 
+        . . . 8 8 8 8 1 1 8 . . . . . . 
+        . . 8 8 8 8 8 1 1 8 8 . . . . . 
+        . . 8 8 8 8 8 8 8 8 8 . . . . . 
+        . . . 8 8 8 8 8 8 8 . . . . . . 
+        . . . . 8 8 8 8 8 . . . . . . . 
+        . . . . . 8 8 8 . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `, mySprite, 100, 0)
+})
+let projectile: Sprite = null
+let mySprite: Sprite = null
+mySprite = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
@@ -54,3 +76,4 @@ let mySprite3 = sprites.create(img`
     `, SpriteKind.Projectile)
 mySprite.setPosition(46, 66)
 scene.setBackgroundColor(9)
+controller.moveSprite(mySprite)
