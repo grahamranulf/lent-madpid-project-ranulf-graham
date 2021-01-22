@@ -37,16 +37,16 @@
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
+. . . . . 8 8 8 . . . . . . . . 
+. . . . 8 8 8 8 8 . . . . . . . 
+. . . 8 8 8 8 1 1 8 . . . . . . 
+. . 8 8 8 8 8 1 1 8 8 . . . . . 
+. . 8 8 8 8 8 8 8 8 8 . . . . . 
+. . . 8 8 8 8 8 8 8 . . . . . . 
+. . . . 8 8 8 8 8 . . . . . . . 
+. . . . . 8 8 8 . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-`</field></shadow></value><value name="kind"><shadow type="spritekind" id="BuV[M:[%t,w_BSRdcxdI"><field name="MEMBER">Player</field></shadow></value></block></value></block></next></block></next></block></statement></block></xml>
+`</field></shadow></value><value name="kind"><shadow type="spritekind" id="BuV[M:[%t,w_BSRdcxdI"><field name="MEMBER">Projectile</field></shadow></value></block></value><next><block type="spritesetpos" id="7?~Sr^Ik_ZguwUd{b7HX"><value name="sprite"><block type="variables_get" id="1V`1mX?H1_FbMx7[/VK["><field name="VAR" id="OLQY?NHbn}jG{BC}O3W3">mySprite</field></block></value><value name="x"><shadow type="positionPicker" id="5ZP|tcY^E]%~eQ[Of,:P"><field name="index">46</field></shadow></value><value name="y"><shadow type="positionPicker" id="#K)DO4sa!gOm_e@!g75I"><field name="index">66</field></shadow></value><next><block type="gamesetbackgroundcolor" id="ht/w:h5gQ-^ue~Ck]2+H"><value name="color"><shadow type="colorindexpicker" id="m1{U0Zb%j6)MQpUDwN3_"><field name="index">9</field></shadow></value></block></next></block></next></block></next></block></next></block></statement></block></xml>
