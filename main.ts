@@ -22,8 +22,8 @@ sprites.onOverlap(SpriteKind.Enemy, SpriteKind.Player, function (sprite, otherSp
     game.over(false, effects.dissolve)
     mySprite.destroy(effects.spray, 500)
 })
-sprites.onDestroyed(SpriteKind.Enemy, function (sprite) {
-    sprites.create(img`
+sprites.onDestroyed(SpriteKind.Player, function (sprite) {
+    mySprite2 = sprites.create(img`
         . . . . . . . . . . . . . . . . 
         . . . . . 3 3 3 3 . . . . . . . 
         . . . . 3 3 3 3 3 3 . . . . . . 
@@ -40,8 +40,7 @@ sprites.onDestroyed(SpriteKind.Enemy, function (sprite) {
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
-        `, SpriteKind.Enemy).setPosition(110, 76)
-    mySprite2.follow(mySprite, 20)
+        `, SpriteKind.Enemy)
 })
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, otherSprite) {
     mySprite2.destroy(effects.spray, 500)
