@@ -41,6 +41,7 @@ sprites.onDestroyed(SpriteKind.Enemy, function (sprite) {
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         `, SpriteKind.Enemy).setPosition(110, 76)
+    mySprite2.follow(mySprite, 20)
 })
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, otherSprite) {
     mySprite2.destroy(effects.spray, 500)
