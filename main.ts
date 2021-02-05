@@ -22,6 +22,26 @@ sprites.onOverlap(SpriteKind.Enemy, SpriteKind.Player, function (sprite, otherSp
     game.over(false, effects.dissolve)
     mySprite.destroy(effects.spray, 500)
 })
+sprites.onDestroyed(SpriteKind.Enemy, function (sprite) {
+    sprites.create(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . 3 3 3 3 . . . . . . . 
+        . . . . 3 3 3 3 3 3 . . . . . . 
+        . . . 3 3 f 3 3 f 3 3 . . . . . 
+        . . 3 3 3 3 3 3 3 3 3 3 . . . . 
+        . 3 3 3 3 3 f f 3 3 3 3 3 . . . 
+        . 3 . . 3 . . 3 . . 3 . 3 . . . 
+        . . 3 . . 3 . . 3 . . 3 . 3 . . 
+        . 3 . . 3 . . 3 . . 3 . 3 . . . 
+        . . 3 . . 3 . . 3 . . 3 . 3 . . 
+        . 3 . . 3 . . 3 . . . . 3 . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `, SpriteKind.Enemy).setPosition(110, 76)
+})
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, otherSprite) {
     mySprite2.destroy(effects.spray, 500)
 })
