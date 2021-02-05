@@ -19,14 +19,11 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
         `, mySprite, 100, 0)
 })
 sprites.onOverlap(SpriteKind.Enemy, SpriteKind.Player, function (sprite, otherSprite) {
-    info.changeLifeBy(-1)
-})
-info.onLifeZero(function () {
-    game.over(false, effects.melt)
+    game.over(false, effects.dissolve)
+    mySprite.destroy(effects.spray, 500)
 })
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, otherSprite) {
-    mySprite2.destroy(effects.spray, 200)
-    info.changeScoreBy(1)
+    mySprite2.destroy(effects.spray, 500)
 })
 let projectile: Sprite = null
 let mySprite2: Sprite = null
@@ -67,9 +64,10 @@ mySprite2 = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
     `, SpriteKind.Enemy)
-mySprite2.follow(mySprite, 20)
 mySprite.setPosition(46, 66)
 scene.setBackgroundColor(9)
+controller.moveSprite(mySprite)
+mySprite2.follow(mySprite, 20)
 mySprite.setBounceOnWall(true)
 scene.setBackgroundImage(img`
     9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
@@ -193,5 +191,3 @@ scene.setBackgroundImage(img`
     9999999977777999999999999999999999977777999999999999999999999997777799999999999999999999977777999999999999999997777799999999999999997777779999999999777777799999
     9999999977777999999999999999999999977777999999999999999999999997777799999999999999999999977777999999999999999997777799999999999999997777799999999999777777799999
     `)
-info.setLife(3)
-controller.moveSprite(mySprite)
