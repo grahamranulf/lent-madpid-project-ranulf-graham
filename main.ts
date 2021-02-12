@@ -22,7 +22,7 @@ sprites.onOverlap(SpriteKind.Enemy, SpriteKind.Player, function (sprite, otherSp
     game.over(false, effects.dissolve)
     mySprite.destroy(effects.spray, 500)
 })
-sprites.onDestroyed(SpriteKind.Player, function (sprite) {
+sprites.onDestroyed(SpriteKind.Enemy, function (sprite) {
     mySprite2 = sprites.create(img`
         . . . . . . . . . . . . . . . . 
         . . . . . 3 3 3 3 . . . . . . . 
@@ -41,6 +41,8 @@ sprites.onDestroyed(SpriteKind.Player, function (sprite) {
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         `, SpriteKind.Enemy)
+    mySprite2.follow(mySprite, 50)
+    info.changeScoreBy(1)
 })
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, otherSprite) {
     mySprite2.destroy(effects.spray, 500)
@@ -211,3 +213,4 @@ scene.setBackgroundImage(img`
     9999999977777999999999999999999999977777999999999999999999999997777799999999999999999999977777999999999999999997777799999999999999997777779999999999777777799999
     9999999977777999999999999999999999977777999999999999999999999997777799999999999999999999977777999999999999999997777799999999999999997777799999999999777777799999
     `)
+music.playMelody("- - A - G - B G ", 120)
